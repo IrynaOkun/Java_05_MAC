@@ -82,4 +82,16 @@ public class FizzBuzzTest {
         }
 
 
+    public static class SumOfNumbersOfArrayTest {
+
+        @Test
+        public void testSumOfNumbersOfArray() {
+            int[] array = {0, 1, 2, 3, 4, 5};
+            int expectedResult = 15;
+
+            int actualResult = new SumOfNumbersOfArray().sumOfNumbersOfArray(array);
+
+            Assert.assertEquals(expectedResult, actualResult);
+        }
     }
+}
