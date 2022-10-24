@@ -6,9 +6,20 @@ public class CreateArray {
      * Например, createIntArray(1, 2, 3, 4, 5) -> {1, 2, 3, 4, 5}
      */
 
-//    public int[] createIntArray(int a, int b, int c, int d, int e) {
-//
-//
-//    }
+    //
+    public int[] createInArray(int a, int b, int c, int d, int e) {
+
+        return new int[]  {a, b, c, d, e};
+
+    }
+
+    //4
+    public String[] createArrayFromText(String sentence) {
+
+        return sentence.split(" ");
+
+    }
+
+
 
 }

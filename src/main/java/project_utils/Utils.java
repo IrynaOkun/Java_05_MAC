@@ -123,7 +123,11 @@ public class Utils {
 
     }
 
-    //
+    //CreateArrayFromText
+    public static String[] createArrayFromText(String sentence) {
+
+        return sentence.split(" ");
+    }
 
 
     public static void main(String[] args) {
