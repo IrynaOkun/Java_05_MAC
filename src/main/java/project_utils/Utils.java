@@ -1,5 +1,7 @@
 package project_utils;
 
+import java.util.Arrays;
+
 public class Utils {
 
     public static final String ANSI_RESET = "\u001B[0m";
@@ -87,6 +89,8 @@ public class Utils {
         }
     }
 
+    //Algorithms_____________________________________
+
     //MethodFrom22Task
     public static int methodTask22(int[] array) {
         int sum = array[0];
@@ -129,10 +133,32 @@ public class Utils {
         return sentence.split(" ");
     }
 
+    public static int[] bubbleSort(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 1 + i; j < array.length; j++) {
+                int temp = array[i];
+                if (temp > array[j]) {
+                    int x = array[j];
+                    array[i] = x;
+                    array[j] = temp;
+                }
+            }
+        }
+
+        return array;
+    }
+
+
 
     public static void main(String[] args) {
 
-        printTaskNumberDolphin();
+        //printTaskNumberDolphin();
+
+        int[] array = {23, -23, 0, 45, 120, 3, 50};
+
+        bubbleSort(array);
+
+        System.out.println(Arrays.toString(bubbleSort(array)));
 
     }
 

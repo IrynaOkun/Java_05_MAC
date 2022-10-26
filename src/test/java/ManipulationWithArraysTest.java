@@ -4,6 +4,6 @@ public class ManipulationWithArraysTest {
 
     @Test
     public void testArrayOfProductsInRange_HP() {
-        int[] array
+        int[] array;
     }
 }
