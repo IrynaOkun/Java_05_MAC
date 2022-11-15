@@ -1,3 +1,4 @@
+import project_utils.Utils;
 public class StringMethods {
 
     /**
@@ -83,4 +84,113 @@ public class StringMethods {
         return third;
     }
 
+    /**
+     * 8
+     *
+     */
+
+    public static String insertQuotes (String text, String text2) {
+        if (!text.isEmpty() && !text2.isEmpty()) {
+            String textNew = text.replace("\",", ": ");
+            String textNew2 = text2.replace("\" надо любить жизнь больше, чем смысл жизни\" ", "чем");
+
+            return textNew.concat(textNew2).concat("\"");
+        }
+
+        return " ";
+    }
+
+    public static boolean isStringNotNullAndNotEmpty(String text) {
+        if (text != null) {
+            if (!text.trim().isEmpty()) {
+
+            return true;
+        }
+
+    }
+
+        return false;
 }
+
+
+    //11
+    public boolean SameFirstLastLetterIndexOf(String str) {
+        //сначала проверяем негативный сценарий
+        if (str != null && !str.trim().isEmpty() && !str.trim().contains(" ")) {
+            //далее проверяем позитивный сценарий
+            str = str.trim().toLowerCase();//всегда сначала trim
+
+            return str.lastIndexOf(str.charAt(0)) == (str.length() - 1);//найди последний индекс и сравни с послед индексом строки
+            //взяли последн. индекс строки буквы и она же находится на последнем индексе
+            //str.charAt(0) - первая буква слова
+        }
+
+        return false;
+    }
+
+    //Var2_хардкор
+
+    public boolean compareFirstAndLastLetters(String word) {
+        if (word == null) {
+            return false;
+        }
+        if (word.isEmpty()) {
+            return false;
+        }
+
+        word = word.trim();
+
+        if (word.indexOf('A') == 0 && word.lastIndexOf('a') == word.length() -1) {
+
+            return true;
+        }
+
+        return false;
+    }
+
+    //Var3__
+
+    public String isWordStartEqualEnd (String inString) {
+        if (!inString.isEmpty()) {
+            inString = inString.toLowerCase();
+            if (inString.indexOf(inString.charAt(0)) == inString.indexOf(inString.charAt(inString.length() - 1))) {
+
+                return "True";
+            }
+
+            return "False";
+        }
+
+        return "Строка пустая";
+    }
+
+    //обязательно делаем trim и проверяем на null что стркоа !isEmpty
+
+    //V4
+    public String countAs (String inString) {
+        if (!inString.isEmpty()) {
+            int lengthStringWithoutAa = inString.trim().toLowerCase().replace("a", "").length();
+            int countAaInString = inString.length() - lengthStringWithoutAa;
+
+            return countAaInString + ", " + lengthStringWithoutAa;
+        }
+
+        return "Строка пустая";
+    }
+
+
+
+
+    public static void main(String[] args) {
+
+        isStringNotNullAndNotEmpty("jkjkjkjkljkljkljlkj");
+        System.out.println(isStringNotNullAndNotEmpty("jkhjhjhjkhkjhjkhjk"));
+
+        System.out.println(insertQuotes("qwerty", "ghjkl"));;
+
+
+
+    }
+
+}
+
